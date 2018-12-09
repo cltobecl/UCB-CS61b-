@@ -5,6 +5,7 @@ public class HorribleSteve {
             if (!Flik.isSameNumber(i, j)) {
                 break; // break exits the for loop!
             }
+            System.out.println("j = "  + j + " i = " + i);
         }
         System.out.println("i is " + i);
     }

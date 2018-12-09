@@ -114,19 +114,26 @@ public class IntList {
         return C;
     }
 
+    public static IntList reverse(IntList prev, IntList cur){
+        if(cur != null) {
+            IntList res = cur;
+            if(cur.rest != null){
+                res = reverse(cur, cur.rest);
+            }
+            cur.rest = prev;
+            return res;
+        }
+        return null;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public static IntList reverse(IntList A) {
+        if(A == null){
+            return null;
+        }
+        IntList res = reverse(A, A.rest);
+        A.rest = null;
+        return res;
+    }
 
 
     /**
